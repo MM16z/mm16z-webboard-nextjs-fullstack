@@ -1,0 +1,92 @@
+
+.reply-box-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    left: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    inline-size: 360px;
+    & > .comment-profile-circle-line {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        background: linear-gradient(to right, white, white),
+            linear-gradient(135deg, rgba(255, 29, 0, 1) 0%, rgba(76, 0, 255, 1) 100%);
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+        overflow: hidden;
+    }
+    & > .comment-username {
+        position: absolute;
+        top: 22px;
+        left: 40px;
+        font-family: "Silkscreen", cursive;
+        font-size: 15px;
+        inline-size: 320px;
+        line-height: 25px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    & > .comment-post-content {
+        display: inline-block;
+        position: relative;
+        font-family: "Varela Round", sans-serif;
+        font-size: 10.6px;
+        left: 0px;
+        margin-top: 42.5px;
+        inline-size: 360px;
+        word-wrap: break-word;
+    }
+    & > hr {
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 361px) {
+    .reply-box-container > .comment-username {
+        inline-size: 220px;
+    }
+    .reply-box-container > .comment-post-content {
+        inline-size: 260px;
+    }
+    .reply-box-container > hr {
+        width: 300px;
+    }
+    .reply-box-container > hr {
+        position: relative;
+        width: 260px;
+        left: -50px;
+    }
+}
+@media screen and (min-width: 362px) and (max-width: 450px) {
+    .reply-box-container > .comment-username {
+        inline-size: 220px;
+    }
+    .reply-box-container > .comment-post-content {
+        inline-size: 260px;
+    }
+    .reply-box-container > hr {
+        position: relative;
+        width: 260px;
+        left: -50px;
+    }
+}
+@media screen and (min-width: 451px) and (max-width: 500px) {
+    .reply-box-container > .comment-username {
+        inline-size: 220px;
+    }
+    .reply-box-container > .comment-post-content {
+        inline-size: 260px;
+    }
+    .reply-box-container > hr {
+        position: relative;
+        width: 260px;
+        left: -50px;
+    }
+}
