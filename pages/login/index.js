@@ -37,7 +37,7 @@ const Login = () => {
       password: password,
     };
     axios
-      .post("https://13.214.139.99:1616/login", JSON.stringify(jsonBodyData), {
+      .post("http://13.214.139.99:1616/login", JSON.stringify(jsonBodyData), {
         headers: {
           "Content-Type": "application/json",
         },
