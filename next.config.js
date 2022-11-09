@@ -8,8 +8,8 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "http://13.214.139.99:1616/(.*)",
-        destination: "http://13.214.139.99:1616/.*",
+        source: "http://13.214.139.99:1616/(:.*)",
+        destination: "http://13.214.139.99:1616/:.*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
