@@ -66,7 +66,7 @@ export default function Userpanel({ posts }) {
     };
     axios
       .post(
-        "http://localhost:3001/user_post_create",
+        "http://13.214.139.99:1616/user_post_create",
         JSON.stringify(jsonBodydata),
         {
           headers: {
@@ -102,7 +102,7 @@ export default function Userpanel({ posts }) {
     }
     axios
       .post(
-        "http://localhost:3001/user_post_edit",
+        "http://13.214.139.99:1616/user_post_edit",
         JSON.stringify({
           editcontent: preveditdata,
           postid: userpostid,
@@ -134,7 +134,7 @@ export default function Userpanel({ posts }) {
   const onDelClickhandler = (postid) => {
     axios
       .post(
-        "http://localhost:3001/user_post_delete",
+        "http://13.214.139.99:1616/user_post_delete",
         JSON.stringify({
           userpostid: postid,
         }),
@@ -278,7 +278,7 @@ export async function getServerSideProps(context) {
   let currentUser = context.query.currentUser;
   const options = {
     method: "GET",
-    url: "http://localhost:3001/user_posts",
+    url: "http://13.214.139.99:1616/user_posts",
     params: { currentUser: currentUser },
   };
   const posts = await axios.request(options);

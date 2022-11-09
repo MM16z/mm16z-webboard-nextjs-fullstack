@@ -2,7 +2,7 @@ import axios from "axios";
 
 const getUserAuth = () => {
   const response = axios.post(
-    "http://localhost:3001/jwtauth",
+    "http://13.214.139.99:1616/jwtauth",
     JSON.stringify({}),
     {
       headers: {

@@ -42,11 +42,15 @@ const Register = () => {
     };
 
     axios
-      .post("http://localhost:3001/register", JSON.stringify(jsonBodydata), {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      .post(
+        "http://13.214.139.99:1616/register",
+        JSON.stringify(jsonBodydata),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((response) => {
         if (response.data.status === "ok") {
           alert("Register Success");
