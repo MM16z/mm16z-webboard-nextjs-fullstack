@@ -1,8 +1,6 @@
-import CommentBoxContainer from "./comment-box-container";
-import HeartBtn from "./heartbtn";
-
 function PostBoxContainer({ children, ...props }) {
   const { username, title, postcontent, postdate } = props;
+
   return (
     <div className="post-box-container">
       <span className="vertical-line"></span>
@@ -18,6 +16,7 @@ function PostBoxContainer({ children, ...props }) {
         style={{
           fontSize: "15px",
           marginLeft: "20px",
+          marginBottom: "10px",
           opacity: "0.75",
           fontFamily: "Silkscreen, cursive",
         }}

@@ -95,7 +95,7 @@
         top: 82.5px;
         left: 20px;
         font-family: "Varela Round", sans-serif;
-        font-size: 17.6px;
+        font-size: 16.6px;
         font-weight: bold;
         inline-size: 360px;
         line-height: 20px;
@@ -122,6 +122,42 @@
         right: 10px;
         inline-size: 140px;
         text-align: center;
+    }
+    & > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+        row-gap: 10px;
+        & > label {
+            font-family: "Silkscreen", cursive;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        & > #comment-input {
+            font-family: "Varela Round", sans-serif;
+            font-size: 14px;
+            width: 350px;
+            height: 50px;
+            resize: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        & > #comment-submitbtn {
+            font-family: "Silkscreen", cursive;
+            background-color: white;
+            font-size: 16px;
+            opacity: 1;
+            cursor: pointer;
+            border-radius: 5px;
+            border-width: 1px;
+            border-color: rgb(46, 46, 46);
+            &:hover {
+                opacity: 0.5;
+                transition: 0.3s;
+            }
+        }
     }
 }
 
@@ -154,6 +190,12 @@
     .post-box-container > .post-date {
         right: 110px;
     }
+    .post-box-container > form {
+        width: 300px;
+    }
+    .post-box-container > form > #comment-input {
+        width: 250px;
+    }
 }
 @media screen and (min-width: 362px) and (max-width: 450px) {
     .post-box-container > .post-content {
@@ -184,6 +226,12 @@
     .post-box-container > .post-date {
         right: 110px;
     }
+    .post-box-container > form {
+        width: 300px;
+    }
+    .post-box-container > form > #comment-input {
+        width: 250px;
+    }
 }
 @media screen and (min-width: 451px) and (max-width: 500px) {
     .post-box-container > .post-content {
@@ -213,5 +261,11 @@
     }
     .post-box-container > .post-date {
         right: 110px;
+    }
+    .post-box-container > form {
+        width: 300px;
+    }
+    .post-box-container > form > #comment-input {
+        width: 250px;
     }
 }

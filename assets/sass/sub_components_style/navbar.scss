@@ -63,6 +63,15 @@
     @extend .navbar-text-login;
     right: 145px;
 }
+.navbar-text-createpost {
+    @extend .navbar-text-login;
+    // right: 295px;
+}
+.navbar-text-logout {
+    @extend .navbar-text-login;
+    right: 35px;
+    color: red;
+}
 
 @keyframes rainbow {
     0% {
@@ -89,7 +98,22 @@
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
     .navbar-text-login,
+    .navbar-text-register,
+    .navbar-text-createpost {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .navbar-text-login,
+    .navbar-text-register,
+    .navbar-text-createpost {
+        font-size: 15px;
+    }
     .navbar-text-register {
-        display: none;
+        right: 110px;
+    }
+    .navbar-text-createpost {
+        right: 95px !important;
     }
 }

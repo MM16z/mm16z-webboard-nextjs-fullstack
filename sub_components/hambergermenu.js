@@ -1,25 +1,14 @@
-import { useContext, useEffect, useRef, useState } from "react";
-import { Homecontext } from "../pages";
+import { forwardRef, useRef } from "react";
 
-const Hambergermenu = () => {
-  const homecontext = useContext(Homecontext);
-  const hambergermenu = useRef();
-  const lineRef = useRef();
-  const lineRef1 = useRef();
-  const lineRef2 = useRef();
-  useEffect(() => {
-    console.log(homecontext);
-  }, []);
+const Hambergermenu = forwardRef((probs, hambergermenuref) => {
   return (
     <svg
+      id="hambtn"
       className="ham hamRotate menu"
       viewBox="0 0 100 100"
       width="80"
-      ref={hambergermenu}
-      onClick={() => {
-        hambergermenu.current.classList.toggle("active");
-        homecontext.mobilemenuref.current.classList.toggle("active");
-      }}
+      ref={hambergermenuref}
+      onClick={probs.onClick}
     >
       <path
         className="line top"
@@ -32,6 +21,5 @@ const Hambergermenu = () => {
       />
     </svg>
   );
-};
-
+});
 export default Hambergermenu;

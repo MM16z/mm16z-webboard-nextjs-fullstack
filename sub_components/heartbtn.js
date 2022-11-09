@@ -1,26 +1,17 @@
-//
-//
+import { forwardRef, useEffect } from "react";
 
-import { useState } from "react";
-
-export default function HeartBtn() {
-  const [postlikedcountstate, setpPostlikedCountstate] = useState(0);
-  const [postlikedstate, setpPostlikedstate] = useState(false);
+const HeartBtn = forwardRef((props, { heartRef, countRef }) => {
+  useEffect(() => {}, []);
   return (
     <div className="heartbtn-warpper">
-      <div className="postlikestate">{postlikedcountstate}</div>
+      <div className="postlikecount" ref={countRef}>
+        {props.postLikedCount}
+      </div>
       <input
         type="checkbox"
         id="checkbox"
-        checked={postlikedstate}
-        onClick={() => {
-          if (postlikedstate) {
-            setpPostlikedCountstate(postlikedcountstate - 1);
-          } else {
-            setpPostlikedCountstate(postlikedcountstate + 1);
-          }
-          setpPostlikedstate(!postlikedstate);
-        }}
+        onChange={props.onChange}
+        defaultChecked={props.defaultChecked}
       />
       <label htmlFor="checkbox">
         <noscript>By http://robeen.io</noscript>
@@ -36,6 +27,7 @@ export default function HeartBtn() {
             transform="translate(467 392)"
           >
             <path
+              ref={heartRef}
               d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
               id="heart"
               fill="#AAB8C2"
@@ -81,4 +73,10 @@ export default function HeartBtn() {
       </label>
     </div>
   );
-}
+});
+
+export default HeartBtn;
+// const [postlikedcountstate, setpPostlikedCountstate] = useState([
+//   0, 0, 0, 0, 0, 0,
+// ]);
+// const [postlikedstate, setpPostlikedstate] = useState(false);

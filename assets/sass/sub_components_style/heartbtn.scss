@@ -1,4 +1,4 @@
-.postlikestate {
+.postlikecount {
     position: absolute;
     left: 40px;
     font-size: 16.5px;
@@ -6,17 +6,20 @@
     letter-spacing: -2px;
 }
 .heartbtn-warpper {
-    z-index: 3;
+    z-index: 10;
     position: absolute;
     top: -24.3px;
     left: 50%;
     transform: translateX(-50%);
+    & > label {
+        & > svg {
+            pointer-events: none;
+        }
+    }
 }
 
 svg {
-    cursor: pointer;
     overflow: visible;
-    width: 50px;
     #heart {
         transform-origin: center;
         animation: animateHeartOut 0.3s linear forwards;
@@ -25,9 +28,19 @@ svg {
         transform-origin: 29.5px 29.5px;
     }
 }
+#heart-svg {
+    width: 50px !important;
+}
 
 #checkbox {
-    display: none;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    left: 9.5px;
+    width: 22.5px;
+    height: 22.5px;
+    z-index: 0;
 }
 
 #checkbox:checked + label svg {

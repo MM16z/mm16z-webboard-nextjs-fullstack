@@ -1,3 +1,7 @@
+#hambtn {
+    width: 80px !important;
+}
+
 .ham {
     z-index: 11;
     cursor: pointer;
@@ -8,8 +12,8 @@
     -ms-user-select: none;
     user-select: none;
     position: absolute;
-    right: 0px;
-    top: -5.5px;
+    right: 5px;
+    top: -6px;
 }
 .hamRotate.active {
     transform: rotate(45deg);

@@ -1,22 +1,65 @@
 import { useEffect, useRef, useState } from "react";
+import axios from "axios";
+import { useRouter } from "next/router";
+
+import hasJWT from "../../jwt_auth/hasJWT";
+import getUserauth from "../../jwt_auth/getUserAuth";
 
 const Login = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const emailRef = useRef();
 
+  const router = useRouter();
+
+  const routeAuth = () => {
+    if (hasJWT()) {
+      if (
+        getUserauth().then((response) => {
+          if (response.data.status === "error") {
+            localStorage.clear("token");
+            window.location = "/";
+          } else {
+            router.push("/userpanel");
+          }
+        })
+      );
+      alert("already login");
+      alert("dont broke my Pepehands code :(");
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const Jsondata = {
+    const jsonBodyData = {
       email: email,
       password: password,
     };
+    axios
+      .post("http://localhost:3001/login", JSON.stringify(jsonBodyData), {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        if (response.data.status === "ok") {
+          alert("Login success");
+          localStorage.setItem("token", response.data.token);
+          window.location = "/userpanel";
+        } else {
+          alert("login failed");
+        }
+      })
+      .catch((error) => {
+        console.log("Error", error);
+      });
     setEmail("");
     setPassword("");
   };
 
   useEffect(() => {
+    routeAuth();
     emailRef.current.focus();
   }, []);
 

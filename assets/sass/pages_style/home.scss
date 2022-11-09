@@ -3,7 +3,7 @@
     width: 100%;
     min-height: 100%;
     height: auto;
-    padding-bottom: 15%;
+    // padding-bottom: 15%;
 }
 .userstate {
     z-index: 2;
@@ -89,6 +89,7 @@
     animation: fadeout 2s forwards;
     pointer-events: none;
     opacity: 0;
+    overflow: hidden;
     &.active {
         opacity: 1;
         pointer-events: all;
@@ -110,6 +111,35 @@
     }
     > .image-warper {
         opacity: 0.25;
+    }
+}
+
+.paginate {
+    z-index: 10;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    list-style: none;
+    column-gap: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    margin-left: -20px;
+    transition: 1s;
+    & > li {
+        cursor: pointer;
+        &.selected {
+            background-color: rgb(255, 190, 190);
+            border-radius: 20px;
+            padding: 2px;
+            transition: 1s;
+        }
+        &:first-child {
+            font-weight: bold;
+        }
+        &:last-child {
+            font-weight: bold;
+        }
     }
 }
 
@@ -196,7 +226,7 @@
         margin-bottom: 50px;
     }
 }
-@media screen and (min-width: 0px) and (max-width: 1100px) {
+@media screen and (min-width: 0px) and (max-width: 1420px) {
     .userstate {
         top: 80px;
     }
