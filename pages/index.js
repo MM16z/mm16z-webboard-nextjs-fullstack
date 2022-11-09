@@ -171,7 +171,6 @@ function Home({ posts }) {
 
   useEffect(() => {
     routeAuth();
-    console.log(countRef);
   }, [userId]);
 
   return (
