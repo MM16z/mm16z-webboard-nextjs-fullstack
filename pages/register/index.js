@@ -43,7 +43,7 @@ const Register = () => {
 
     axios
       .post(
-        "http://13.214.139.99:1616/register",
+        "https://mm16-webboard.herokuapp.com/register",
         JSON.stringify(jsonBodydata),
         {
           headers: {

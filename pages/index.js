@@ -97,7 +97,7 @@ function Home({ posts }) {
     };
     axios
       .post(
-        "http://13.214.139.99:1616/user_post_comment",
+        "https://mm16-webboard.herokuapp.com/user_post_comment",
         JSON.stringify(jsondata),
         {
           headers: {
@@ -137,7 +137,7 @@ function Home({ posts }) {
           postid: postId,
         };
         axios.post(
-          "http://13.214.139.99:1616/user_post_liked",
+          "https://mm16-webboard.herokuapp.com/user_post_liked",
           JSON.stringify(jsondata),
           {
             headers: {
@@ -154,7 +154,7 @@ function Home({ posts }) {
           postId: postId,
         };
         axios.post(
-          "http://13.214.139.99:1616/user_post_unliked",
+          "https://mm16-webboard.herokuapp.com/user_post_unliked",
           JSON.stringify(jsondata),
           {
             headers: {
@@ -293,7 +293,7 @@ export async function getServerSideProps(context) {
 
   const postDataOptions = {
     method: "GET",
-    url: "http://13.214.139.99:1616/user_posts",
+    url: "https://mm16-webboard.herokuapp.com/user_posts",
     params: { currentQuery: currentQuery, currentUserId: currentUserId },
   };
   const posts = await axios.request(postDataOptions);
