@@ -37,15 +37,11 @@ const Login = () => {
       password: password,
     };
     axios
-      .post(
-        "https://ec2-13-214-139-99.ap-southeast-1.compute.amazonaws.com:1616/login",
-        JSON.stringify(jsonBodyData),
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
+      .post("https://13.214.139.99:1616/login", JSON.stringify(jsonBodyData), {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((response) => {
         if (response.data.status === "ok") {
           alert("Login success");
