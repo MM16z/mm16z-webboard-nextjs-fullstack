@@ -287,7 +287,6 @@ export async function getServerSideProps(context) {
   let currentUserId = context.req.headers.cookie
     ? context.req.headers.cookie.split("=")[1]
     : null;
-  console.log(currentUserId);
   if (currentQuery <= 0) {
     currentQuery = 1;
   }
