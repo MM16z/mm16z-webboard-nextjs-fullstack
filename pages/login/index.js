@@ -37,11 +37,15 @@ const Login = () => {
       password: password,
     };
     axios
-      .post("http://13.214.139.99:1616/login", JSON.stringify(jsonBodyData), {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      .post(
+        "https://mm16-webboard.herokuapp.com/login",
+        JSON.stringify(jsonBodyData),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((response) => {
         if (response.data.status === "ok") {
           alert("Login success");
