@@ -38,7 +38,7 @@ const Login = () => {
     };
     axios
       .post(
-        "ec2-13-214-139-99.ap-southeast-1.compute.amazonaws.com:1616/login",
+        "https://ec2-13-214-139-99.ap-southeast-1.compute.amazonaws.com:1616/login",
         JSON.stringify(jsonBodyData),
         {
           headers: {
