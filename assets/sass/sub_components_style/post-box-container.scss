@@ -71,13 +71,23 @@
         top: 0;
         margin-top: 15px;
         margin-left: 20px;
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         border-radius: 50%;
-        background: linear-gradient(to right, white, white),
+        background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)),
             linear-gradient(135deg, rgba(255, 29, 0, 1) 0%, rgba(76, 0, 255, 1) 100%);
         background-clip: padding-box, border-box;
         background-origin: padding-box, border-box;
         overflow: hidden;
+        & > .profile-circle-img {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            top: 2.5px;
+            left: 2.5px;
+            border-radius: 50%;
+            background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ft00.deviantart.net%2FSWUCfIShpn7wS8Xn4KIkiiFeAcc%3D%2Ffit-in%2F700x350%2Ffilters%3Afixed_height(100%2C100)%3Aorigin()%2Fpre00%2Fd38b%2Fth%2Fpre%2Ff%2F2018%2F009%2F7%2Fc%2Fdo_you_know_da_wae_by_chander_fox-dbzi5xa.png&f=1&nofb=1&ipt=1996a69800e2ab47e0cd1a3687332c3227daaeef94c0044ddae09ebeca68c0b8&ipo=images");
+            background-size: contain;
+        }
     }
     & > .username {
         position: absolute;

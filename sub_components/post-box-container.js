@@ -6,7 +6,9 @@ function PostBoxContainer({ children, ...props }) {
       <span className="vertical-line"></span>
       <span className="vertical-line_1"></span>
       <span className="horizontal-line"></span>
-      <span className="profile-circle-line"></span>
+      <span className="profile-circle-line">
+        <span className="profile-circle-img"></span>
+      </span>
       <span className="username">{username}</span>
       <span className="title">{title}</span>
       <span className="line5"></span>
