@@ -177,6 +177,20 @@ function Home({ posts }) {
   return (
     <div className="home-page-container">
       <User />
+      <span
+        style={{
+          position: "fixed",
+          zIndex: "100",
+          top: "93vh",
+          left: "10px",
+          color: "red",
+          inlineSize: "350px",
+          fontWeight: "bold",
+        }}
+      >
+        Starting November 28th, 2022, Heroku free plan will no longer, website
+        will shutdown.
+      </span>
       <div className="masonry-warper">
         <Masonry
           breakpointCols={breakpointColumnsObj}
