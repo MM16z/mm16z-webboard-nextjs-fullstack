@@ -76,7 +76,3 @@ const HeartBtn = forwardRef((props, { heartRef, countRef }) => {
 });
 
 export default HeartBtn;
-// const [postlikedcountstate, setpPostlikedCountstate] = useState([
-//   0, 0, 0, 0, 0, 0,
-// ]);
-// const [postlikedstate, setpPostlikedstate] = useState(false);

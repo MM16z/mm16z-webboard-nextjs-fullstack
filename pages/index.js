@@ -14,12 +14,6 @@ import { useRef, useState, useEffect } from "react";
 import { setCookie, getCookie } from "cookies-next";
 
 function Home({ posts }) {
-  const breakpointColumnsObj = {
-    default: 4,
-    1920: 3,
-    1500: 2,
-    1100: 1,
-  };
   const [username, setUsername] = useState(null);
   const [userId, setUserId] = useState(null);
   const [comment, setComment] = useState(["", "", "", "", "", ""]);
@@ -36,6 +30,13 @@ function Home({ posts }) {
   const heartRef = useRef();
   const countRef = useRef();
   const router = useRouter();
+
+  const breakpointColumnsObj = {
+    default: 4,
+    1920: 3,
+    1500: 2,
+    1100: 1,
+  };
 
   let FixWithoutRounding = (v, l) => {
     const intPart = Math.trunc(v).toString();

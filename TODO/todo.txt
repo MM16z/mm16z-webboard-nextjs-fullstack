@@ -1,4 +1,4 @@
 //TODO#3: Title input
-//TODO#2: Mobile menu
-//TODO#1: mobile edit onclick to top function
+//TODO#2: Mobile menu //done
+//TODO#1: mobile edit onClick to topview function !important
 

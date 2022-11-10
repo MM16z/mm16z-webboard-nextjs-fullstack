@@ -7,7 +7,7 @@ import "../assets/sass/pages_style/userpanel.scss";
 import "../assets/sass/sub_components_style/navbar.scss";
 import "../assets/sass/sub_components_style/post-box-container.scss";
 import "../assets/sass/sub_components_style/hambergermenu.scss";
-import "../assets/sass/sub_components_style/reply-box-container.scss";
+import "../assets/sass/sub_components_style/comment-box-container.scss";
 import "../assets/sass/sub_components_style/heartbtn.scss";
 import "../assets/sass/sub_components_style/mobilemenu.scss";
 
