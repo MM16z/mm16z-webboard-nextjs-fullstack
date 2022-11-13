@@ -56,7 +56,11 @@ const Navbar = () => {
       {router.pathname === "/userpanel" ? null : (
         <div
           ref={createPostBtnref}
-          className="navbar-text-createpost"
+          className={
+            currentToken.token
+              ? "navbar-text-createpost_isLogin"
+              : "navbar-text-createpost"
+          }
           onClick={() => {
             window.location = "/userpanel";
           }}
