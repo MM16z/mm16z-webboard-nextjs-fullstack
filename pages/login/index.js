@@ -90,6 +90,14 @@ const Login = () => {
             value={password}
             required
           ></input>
+          <div
+            id="toregisref"
+            onClick={() => {
+              router.push("register");
+            }}
+          >
+            Don't have an account?
+          </div>
           <input id="login-submitbtn" type="submit" value="Login"></input>
         </div>
       </form>
