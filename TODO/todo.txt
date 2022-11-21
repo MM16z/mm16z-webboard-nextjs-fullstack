@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 //TODO#5: On Fetching loading components !important
 //TODO#4: Mysql date format with DAYJS
+=======
+//TODO#5: On fetching loading components
+//TODO#4: mysql date with DAYJS
+>>>>>>> test1
 //TODO#3: Title input
 //TODO#2: Mobile menu //DONE
 //TODO#1: Mobile edit onClick to topview function !important
