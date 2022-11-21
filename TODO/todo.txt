@@ -1,3 +1,4 @@
+//TODO#5: On fetching loading components
 //TODO#4: mysql date with DAYJS
 //TODO#3: Title input
 //TODO#2: Mobile menu //done
