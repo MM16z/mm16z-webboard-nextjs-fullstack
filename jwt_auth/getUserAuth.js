@@ -2,7 +2,7 @@ import axios from "axios";
 
 const getUserAuth = () => {
   const response = axios.post(
-    "https://mm16-webboard.herokuapp.com/jwtauth",
+    "https://blushing-gold-macaw.cyclic.app/jwtauth",
     JSON.stringify({}),
     {
       headers: {

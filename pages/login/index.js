@@ -38,7 +38,7 @@ const Login = () => {
     };
     axios
       .post(
-        "https://mm16-webboard.herokuapp.com/login",
+        "https://blushing-gold-macaw.cyclic.app/login",
         JSON.stringify(jsonBodyData),
         {
           headers: {

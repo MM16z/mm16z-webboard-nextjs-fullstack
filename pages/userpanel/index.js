@@ -66,7 +66,7 @@ export default function Userpanel({ posts }) {
     };
     axios
       .post(
-        "https://mm16-webboard.herokuapp.com/user_post_create",
+        "https://blushing-gold-macaw.cyclic.app/user_post_create",
         JSON.stringify(jsonBodydata),
         {
           headers: {
@@ -102,7 +102,7 @@ export default function Userpanel({ posts }) {
     }
     axios
       .post(
-        "https://mm16-webboard.herokuapp.com/user_post_edit",
+        "https://blushing-gold-macaw.cyclic.app/user_post_edit",
         JSON.stringify({
           editcontent: preveditdata,
           postid: userpostid,
@@ -134,7 +134,7 @@ export default function Userpanel({ posts }) {
   const onDelClickhandler = (postid) => {
     axios
       .post(
-        "https://mm16-webboard.herokuapp.com/user_post_delete",
+        "https://blushing-gold-macaw.cyclic.app/user_post_delete",
         JSON.stringify({
           userpostid: postid,
         }),
@@ -278,7 +278,7 @@ export async function getServerSideProps(context) {
   let currentUser = context.query.currentUser;
   const options = {
     method: "GET",
-    url: "https://mm16-webboard.herokuapp.com/user_posts",
+    url: "https://blushing-gold-macaw.cyclic.app/user_posts",
     params: { currentUser: currentUser },
   };
   const posts = await axios.request(options);

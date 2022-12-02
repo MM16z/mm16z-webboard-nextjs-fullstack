@@ -98,7 +98,7 @@ function Home({ posts }) {
     };
     axios
       .post(
-        "https://mm16-webboard.herokuapp.com/user_post_comment",
+        "https://blushing-gold-macaw.cyclic.app/user_post_comment",
         JSON.stringify(jsondata),
         {
           headers: {
@@ -138,7 +138,7 @@ function Home({ posts }) {
           postid: postId,
         };
         axios.post(
-          "https://mm16-webboard.herokuapp.com/user_post_liked",
+          "https://blushing-gold-macaw.cyclic.app/user_post_liked",
           JSON.stringify(jsondata),
           {
             headers: {
@@ -155,7 +155,7 @@ function Home({ posts }) {
           postId: postId,
         };
         axios.post(
-          "https://mm16-webboard.herokuapp.com/user_post_unliked",
+          "https://blushing-gold-macaw.cyclic.app/user_post_unliked",
           JSON.stringify(jsondata),
           {
             headers: {
@@ -308,7 +308,7 @@ export async function getServerSideProps(context) {
 
   const postDataOptions = {
     method: "GET",
-    url: "https://mm16-webboard.herokuapp.com/user_posts",
+    url: "https://blushing-gold-macaw.cyclic.app/user_posts",
     params: { currentQuery: currentQuery, currentUserId: currentUserId },
   };
   const posts = await axios.request(postDataOptions);
